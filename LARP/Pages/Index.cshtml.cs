@@ -1,20 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// Pages/Index.cshtml.cs
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Larp.Models;
+using Larp.Services;
 
-namespace LARP.Pages
+namespace Larp.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly YamlCharacterService _characterService;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(YamlCharacterService characterService)
         {
-            _logger = logger;
+            _characterService = characterService;
         }
+
+        public IEnumerable<Character> Characters { get; private set; }
 
         public void OnGet()
         {
-
+            Characters = _characterService.GetCharacters();
         }
     }
 }

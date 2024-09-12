@@ -1,0 +1,39 @@
+﻿- Id: 1
+  Name: "Aragorn"
+  Species: "Human"
+  ExperiencePoints: 1500
+  Skills:
+    - "Swordsmanship"
+    - "Leadership"
+
+- Id: 2
+  Name: "Legolas"
+  Species: "Elf"
+  ExperiencePoints: 1200
+  Skills:
+    - "Archery"
+    - "Agility"
+
+- Id: 3
+  Name: "Gimli"
+  Species: "Dwarf"
+  ExperiencePoints: 1100
+  Skills:
+    - "Axe Fighting"
+    - "Endurance"
+
+- Id: 4
+  Name: "Gandalf"
+  Species: "Maia"
+  ExperiencePoints: 2000
+  Skills:
+    - "Magic"
+    - "Wisdom"
+
+- Id: 5
+  Name: "Frodo"
+  Species: "Hobbit"
+  ExperiencePoints: 800
+  Skills:
+    - "Stealth"
+    - "Courage"

@@ -1,0 +1,25 @@
+﻿@page "{id:int}"
+@model LARP.Pages.DetailsModel
+
+<h1>Character Details</h1>
+
+<div>
+    <h2>@Model.Character.Name</h2>
+    <p>Species: @Model.Character.Species</p>
+    <p>Experience Points: @Model.Character.ExperiencePoints</p>
+</div>
+
+@if (Model.Character.Skills != null && Model.Character.Skills.Any())
+{
+    <h3>Skills</h3>
+    <ul>
+        @foreach (var skill in Model.Character.Skills)
+        {
+            <li>@skill</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No skills available.</p>
+}

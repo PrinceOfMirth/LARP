@@ -1,5 +1,5 @@
 ﻿@page
-@model IndexModel
+@model Larp.Pages.IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
@@ -8,3 +8,28 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<h1>Characters</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Experience Points</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var character in Model.Characters)
+        {
+            <tr>
+                <td>@character.Name</td>
+                <td>@character.Species</td>
+                <td>@character.ExperiencePoints</td>
+                <td>
+                    <a asp-page="./Details" asp-route-id="@character.Id">View</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
