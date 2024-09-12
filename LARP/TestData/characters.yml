@@ -29,11 +29,3 @@
   Skills:
     - "Magic"
     - "Wisdom"
-
-- Id: 5
-  Name: "Frodo"
-  Species: "Hobbit"
-  ExperiencePoints: 800
-  Skills:
-    - "Stealth"
-    - "Courage"
